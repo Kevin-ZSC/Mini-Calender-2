@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="left">
+            <p class="day">13</p>
+            <p class="wd">Tuesday</p>
+        </div>
+        <div class="right">
+            <p class="m">June</p>
+            <p class="y">2023</p>
+        </div>
+    </div>
+
+
+    <script>
+     const day = document.querySelector('.day');
+     const wd = document.querySelector('.wd');
+     const m = document.querySelector('.m');
+     const y = document.querySelector('.y');
+
+     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+     let today = new Date();
+
+     let weekD = today.getDay();
+     let dayName = days[weekD];
+     let tD  = today.getDate();
+     let tM = today.getMonth();
+     let monthName = months[tM];
+     let tY = today.getFullYear();
+     
+    day.innerHTML = tD;
+    wd.innerHTML = dayName;
+    m.innerHTML = monthName;
+    y.innerHTML = tY;
+
+
+
+    </script>
+</body>
+</html>
